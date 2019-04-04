@@ -145,8 +145,6 @@
     [orangeBtn addTarget:self action:@selector(setNum) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:orangeBtn];
     
-    orangeBtn 
-
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
