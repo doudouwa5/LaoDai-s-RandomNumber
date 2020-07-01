@@ -1,0 +1,30 @@
+PODS:
+  - Masonry (1.0.2)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.8.1):
+    - SDWebImage/Core (= 5.8.1)
+  - SDWebImage/Core (5.8.1)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Masonry (~> 1.0.1)
+  - SDCycleScrollView (~> 1.80)
+  - Toast (~> 4.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - SDCycleScrollView
+    - SDWebImage
+    - Toast
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: bd2f7d0fe9fba27bd2dd002bfbed97ef48e8e1a6
+
+COCOAPODS: 1.9.3
