@@ -604,6 +604,9 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
 //    else if(inputType == NMEFloatFieldInputTypePhoneNum){
 //        self.keyboardType = UIKeyboardTypePhonePad;
 //    }
+    else if (inputType == NMEFloatFieldInputTypePhoneNumAndPoint){
+        self.keyboardType = UIKeyboardTypeDecimalPad;
+    }
     else if(inputType == NMEFloatFieldInputTypeNumAndChars){
         self.keyboardType = UIKeyboardTypeASCIICapable;
     }else{

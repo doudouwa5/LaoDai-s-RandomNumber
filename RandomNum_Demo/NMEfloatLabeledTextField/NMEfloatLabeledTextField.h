@@ -53,6 +53,8 @@ typedef NS_ENUM(NSUInteger, NMEFloatFieldInputType) {
     NMEFloatFieldInputTypeBankAccount, //只能输入数字,10个字符 234-2-984053
     NMEFloatFieldInputTypePostCode, //只能输入数字,5个字符
     NMEFloatFieldInputTypeName, //只能输入数字英文泰文空格
+    
+    NMEFloatFieldInputTypePhoneNumAndPoint,  //只能输入数字和点
 
 };
 

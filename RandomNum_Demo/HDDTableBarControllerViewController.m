@@ -44,7 +44,7 @@
 
     HDDFriendViewController *vcFriend = [[HDDFriendViewController alloc] init];
     HDDNavigationController* navFriend = [[HDDNavigationController alloc] initWithRootViewController:vcFriend];
-    navFriend.title = @"暂定";
+    navFriend.title = @"转换器";
     [navFriend.tabBarItem setImage:[[UIImage imageNamed:@"shuben-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [navFriend.tabBarItem  setSelectedImage:[[UIImage imageNamed:@"shuben"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 
