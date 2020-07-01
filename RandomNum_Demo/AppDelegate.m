@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HDDTableBarControllerViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,20 @@
     
     // 启动图片延时: 1秒
     [NSThread sleepForTimeInterval:1];
+    
+    [self setTabBarCon];
 
     return YES;
+}
+
+-(void) setTabBarCon{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    HDDTableBarControllerViewController* tabVC = [[HDDTableBarControllerViewController alloc]init];
+    self.window.rootViewController = tabVC;
+
 }
 
 
