@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HDDMineCellModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HDDMineCell : UITableViewCell
+
+@property(nonatomic,strong) HDDMineCellModel *model;
 
 @end
 

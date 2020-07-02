@@ -9,11 +9,13 @@
 #import "HDDMineViewController.h"
 #import "HDDBannerView.h"
 #import "HDDMineCell.h"
+#import "HDDMineCellModel.h"
 
 @interface HDDMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong) HDDBannerView *bannerView;
+@property(nonatomic,strong) NSMutableArray *dataArr;
 @end
 
 @implementation HDDMineViewController
@@ -43,16 +45,25 @@
 
 #pragma  mark tableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.dataArr.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 60;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HDDMineCellModel *model = self.dataArr[indexPath.row];
     HDDMineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HDDMineCell"];
+    cell.model = model;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HDDMineCellModel *model = self.dataArr[indexPath.row];
+    if(model.url){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:model.url] options:@{} completionHandler:nil];
+    }
 }
 
 -(HDDBannerView *) bannerView{
@@ -60,6 +71,38 @@
         _bannerView = [[[NSBundle mainBundle] loadNibNamed:@"HDDBannerView" owner:self options:nil] firstObject];
     }
     return _bannerView;
+}
+
+
+-(NSMutableArray *)dataArr{
+    if(!_dataArr){
+        _dataArr = [[NSMutableArray alloc] init];
+        
+        HDDMineCellModel *model1 = [HDDMineCellModel new];
+        model1.imageName = @"banbenhao";
+        model1.tittle = @"APP描述";
+        model1.des = @"这是老戴减肥专用APP，仅供内部使用";
+        model1.imageName = @"miaoshu";
+        model1.hiddenRightImage = YES;
+        [_dataArr addObject:model1];
+        
+//        HDDMineCellModel *model2 = [HDDMineCellModel new];
+//        model2.imageName = @"banbenhao";
+//        model2.tittle = @"tittle1";
+//        model2.des = @"des1";
+//        model2.hiddenRightImage = YES;
+//        [_dataArr addObject:model2];
+        
+        HDDMineCellModel *model3 = [HDDMineCellModel new];
+        model3.imageName = @"banbenhao";
+        model3.tittle = [NSString stringWithFormat:@"当前版本号为: %@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+        model3.des = @"点击查看更新";
+        model3.url = @"https://www.pgyer.com/Eqwm";
+        model3.hiddenRightImage = NO;
+        [_dataArr addObject:model3];
+
+    }
+    return _dataArr;
 }
 
 -(void) setMessageBtn{

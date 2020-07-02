@@ -15,6 +15,7 @@
 		108B975622450F33007EFC7B /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 108B975522450F33007EFC7B /* icon2.png */; };
 		10D561E8224A168100C28823 /* laodai1.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D561E7224A168100C28823 /* laodai1.png */; };
 		46070AE82489072F0005DA86 /* RondomNumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 46070AE72489072F0005DA86 /* RondomNumHelper.m */; };
+		8230E63624ADED8D00DC6C01 /* miaoshu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8230E63524ADED8D00DC6C01 /* miaoshu@2x.png */; };
 		82D4B0BC24AD7DBC009EC5F2 /* HDDBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D4B0BB24AD7DBC009EC5F2 /* HDDBannerView.m */; };
 		82D4B0BE24AD7DD0009EC5F2 /* HDDBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D4B0BD24AD7DD0009EC5F2 /* HDDBannerView.xib */; };
 		82D4B0C324AD89D7009EC5F2 /* xiaohou.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D4B0C224AD89D7009EC5F2 /* xiaohou.png */; };
@@ -23,6 +24,9 @@
 		82D4B0C924AD8B9B009EC5F2 /* dai.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D4B0C824AD8B9B009EC5F2 /* dai.png */; };
 		82D4B0CD24ADAFF7009EC5F2 /* HDDMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D4B0CB24ADAFF7009EC5F2 /* HDDMineCell.m */; };
 		82D4B0CE24ADAFF7009EC5F2 /* HDDMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D4B0CC24ADAFF7009EC5F2 /* HDDMineCell.xib */; };
+		82D4B0D224ADE6E0009EC5F2 /* HDDMineCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D4B0D124ADE6E0009EC5F2 /* HDDMineCellModel.m */; };
+		82D4B0D424ADEBC5009EC5F2 /* banbenhao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D4B0D324ADEBC4009EC5F2 /* banbenhao@2x.png */; };
+		82D4B0D624ADECA9009EC5F2 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D4B0D524ADECA9009EC5F2 /* right@2x.png */; };
 		82DA290624A9C91D0075EA13 /* HDDTableBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DA290524A9C91D0075EA13 /* HDDTableBarControllerViewController.m */; };
 		82DA290A24A9CA590075EA13 /* HDDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DA290924A9CA590075EA13 /* HDDNavigationController.m */; };
 		82DA290D24A9CADB0075EA13 /* HDDCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DA290C24A9CADB0075EA13 /* HDDCommonViewController.m */; };
@@ -56,7 +60,6 @@
 		82DA297024AC249C0075EA13 /* NMEToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DA296E24AC249C0075EA13 /* NMEToastManager.m */; };
 		82DA297524AC251F0075EA13 /* UIViewController+GetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DA297324AC251F0075EA13 /* UIViewController+GetController.m */; };
 		82DA297D24AC270B0075EA13 /* icon_loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 82DA297C24AC270B0075EA13 /* icon_loading.gif */; };
-		82DA298824AC2C8D0075EA13 /* HDDLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82DA298724AC2C8D0075EA13 /* HDDLoading.xib */; };
 		82DA298F24AC3BD40075EA13 /* loading-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DA298E24AC3BD30075EA13 /* loading-4.png */; };
 		82DA29B824AC61810075EA13 /* Settingscontroloptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DA29B724AC61810075EA13 /* Settingscontroloptions@2x.png */; };
 		82DA29BA24AC61C00075EA13 /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DA29B924AC61C00075EA13 /* message@2x.png */; };
@@ -98,6 +101,7 @@
 		46070AE62489072F0005DA86 /* RondomNumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RondomNumHelper.h; sourceTree = "<group>"; };
 		46070AE72489072F0005DA86 /* RondomNumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RondomNumHelper.m; sourceTree = "<group>"; };
 		6A1B4BDFDA841590BF830669 /* Pods-RandomNum_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomNum_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomNum_Demo/Pods-RandomNum_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		8230E63524ADED8D00DC6C01 /* miaoshu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miaoshu@2x.png"; sourceTree = "<group>"; };
 		82D4B0BA24AD7DBC009EC5F2 /* HDDBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDBannerView.h; sourceTree = "<group>"; };
 		82D4B0BB24AD7DBC009EC5F2 /* HDDBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDBannerView.m; sourceTree = "<group>"; };
 		82D4B0BD24AD7DD0009EC5F2 /* HDDBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDDBannerView.xib; sourceTree = "<group>"; };
@@ -108,6 +112,10 @@
 		82D4B0CA24ADAFF7009EC5F2 /* HDDMineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDMineCell.h; sourceTree = "<group>"; };
 		82D4B0CB24ADAFF7009EC5F2 /* HDDMineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDMineCell.m; sourceTree = "<group>"; };
 		82D4B0CC24ADAFF7009EC5F2 /* HDDMineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDDMineCell.xib; sourceTree = "<group>"; };
+		82D4B0D024ADE6E0009EC5F2 /* HDDMineCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDMineCellModel.h; sourceTree = "<group>"; };
+		82D4B0D124ADE6E0009EC5F2 /* HDDMineCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDMineCellModel.m; sourceTree = "<group>"; };
+		82D4B0D324ADEBC4009EC5F2 /* banbenhao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banbenhao@2x.png"; sourceTree = "<group>"; };
+		82D4B0D524ADECA9009EC5F2 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		82DA290424A9C91D0075EA13 /* HDDTableBarControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDTableBarControllerViewController.h; sourceTree = "<group>"; };
 		82DA290524A9C91D0075EA13 /* HDDTableBarControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDTableBarControllerViewController.m; sourceTree = "<group>"; };
 		82DA290824A9CA590075EA13 /* HDDNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDNavigationController.h; sourceTree = "<group>"; };
@@ -162,7 +170,6 @@
 		82DA297324AC251F0075EA13 /* UIViewController+GetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GetController.m"; sourceTree = "<group>"; };
 		82DA297424AC251F0075EA13 /* UIViewController+GetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetController.h"; sourceTree = "<group>"; };
 		82DA297C24AC270B0075EA13 /* icon_loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_loading.gif; sourceTree = "<group>"; };
-		82DA298724AC2C8D0075EA13 /* HDDLoading.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDDLoading.xib; sourceTree = "<group>"; };
 		82DA298B24AC35940075EA13 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		82DA298E24AC3BD30075EA13 /* loading-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-4.png"; sourceTree = "<group>"; };
 		82DA29B724AC61810075EA13 /* Settingscontroloptions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settingscontroloptions@2x.png"; sourceTree = "<group>"; };
@@ -233,6 +240,15 @@
 				82DA29C224AC75810075EA13 /* xunxun.JPG */,
 			);
 			name = banner;
+			sourceTree = "<group>";
+		};
+		82D4B0CF24ADE65B009EC5F2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				82D4B0D024ADE6E0009EC5F2 /* HDDMineCellModel.h */,
+				82D4B0D124ADE6E0009EC5F2 /* HDDMineCellModel.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		82DA290324A9C8F20075EA13 /* tabBar */ = {
@@ -358,7 +374,6 @@
 				82DA296C24AC249C0075EA13 /* NMELoadingToast.xib */,
 				82DA296D24AC249C0075EA13 /* NMEToastManager.h */,
 				82DA296E24AC249C0075EA13 /* NMEToastManager.m */,
-				82DA298724AC2C8D0075EA13 /* HDDLoading.xib */,
 			);
 			path = HDDLoading;
 			sourceTree = "<group>";
@@ -489,6 +504,7 @@
 		82DA29AA24AC5B9F0075EA13 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				82D4B0CF24ADE65B009EC5F2 /* model */,
 				82DA29BC24AC62770075EA13 /* view */,
 				82DA29BB24AC626B0075EA13 /* vc */,
 			);
@@ -525,6 +541,9 @@
 		82DA29AE24AC5E8F0075EA13 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				8230E63524ADED8D00DC6C01 /* miaoshu@2x.png */,
+				82D4B0D524ADECA9009EC5F2 /* right@2x.png */,
+				82D4B0D324ADEBC4009EC5F2 /* banbenhao@2x.png */,
 				82DA29B924AC61C00075EA13 /* message@2x.png */,
 				82DA29B724AC61810075EA13 /* Settingscontroloptions@2x.png */,
 			);
@@ -750,7 +769,9 @@
 				10D561E8224A168100C28823 /* laodai1.png in Resources */,
 				82D4B0BE24AD7DD0009EC5F2 /* HDDBannerView.xib in Resources */,
 				108B975622450F33007EFC7B /* icon2.png in Resources */,
+				8230E63624ADED8D00DC6C01 /* miaoshu@2x.png in Resources */,
 				82DA294924A9DF370075EA13 /* jisuanqi-2@2x.png in Resources */,
+				82D4B0D624ADECA9009EC5F2 /* right@2x.png in Resources */,
 				841EA4D31DC85B7F004620B0 /* LaunchScreen.storyboard in Resources */,
 				108B974D2244985A007EFC7B /* icon1.png in Resources */,
 				82DA297D24AC270B0075EA13 /* icon_loading.gif in Resources */,
@@ -759,6 +780,7 @@
 				82DA294F24A9DF370075EA13 /* diqiuyi-2@2x.png in Resources */,
 				82DA296F24AC249C0075EA13 /* NMELoadingToast.xib in Resources */,
 				82DA292424A9D2840075EA13 /* HDDMineViewController.xib in Resources */,
+				82D4B0D424ADEBC5009EC5F2 /* banbenhao@2x.png in Resources */,
 				108B974A224493EA007EFC7B /* Images.xcassets in Resources */,
 				82DA298F24AC3BD40075EA13 /* loading-4.png in Resources */,
 				82D4B0C524AD8A2B009EC5F2 /* liangren.png in Resources */,
@@ -768,7 +790,6 @@
 				1018F6A1224A01D200F139A3 /* laodai.png in Resources */,
 				82DA29BA24AC61C00075EA13 /* message@2x.png in Resources */,
 				841EA4D01DC85B7F004620B0 /* Assets.xcassets in Resources */,
-				82DA298824AC2C8D0075EA13 /* HDDLoading.xib in Resources */,
 				82D4B0C324AD89D7009EC5F2 /* xiaohou.png in Resources */,
 				82DA29B824AC61810075EA13 /* Settingscontroloptions@2x.png in Resources */,
 				82DA294C24A9DF370075EA13 /* shuben-2@2x.png in Resources */,
@@ -825,6 +846,7 @@
 				82DA291E24A9D26B0075EA13 /* HDDHomeViewController.m in Sources */,
 				82DA290A24A9CA590075EA13 /* HDDNavigationController.m in Sources */,
 				82D4B0BC24AD7DBC009EC5F2 /* HDDBannerView.m in Sources */,
+				82D4B0D224ADE6E0009EC5F2 /* HDDMineCellModel.m in Sources */,
 				82DA290624A9C91D0075EA13 /* HDDTableBarControllerViewController.m in Sources */,
 				82DA296124A9E0E30075EA13 /* UITextField+ExtentionSetEyeBtn.m in Sources */,
 				82DA296A24A9EF0F0075EA13 /* NMEButton.m in Sources */,
@@ -1022,7 +1044,7 @@
 				INFOPLIST_FILE = RandomNum_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yjoo.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1047,7 +1069,7 @@
 				INFOPLIST_FILE = RandomNum_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yjoo.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
