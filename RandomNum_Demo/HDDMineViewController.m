@@ -7,9 +7,13 @@
 //
 
 #import "HDDMineViewController.h"
+#import "HDDBannerView.h"
+#import "HDDMineCell.h"
 
-@interface HDDMineViewController ()
+@interface HDDMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic,strong) HDDBannerView *bannerView;
 @end
 
 @implementation HDDMineViewController
@@ -19,6 +23,43 @@
     self.navigationItem.title = @"我的";
     [self setSettingBtn];
     [self setMessageBtn];
+    
+    [self.view addSubview:self.bannerView];
+    [self.tableView registerNib:[UINib nibWithNibName:@"HDDMineCell" bundle:nil] forCellReuseIdentifier:@"HDDMineCell"];
+    
+    [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(self.view);
+        make.height.mas_equalTo(self.view.frame.size.width/2);
+    }];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.bannerView.mas_bottom);
+        make.left.bottom.right.equalTo(self.view);
+    }];
+    
+    self.tableView.tableFooterView = [[UIView  alloc] initWithFrame:CGRectMake(0, 0, 0, 1)];
+}
+
+
+
+#pragma  mark tableViewDelegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HDDMineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HDDMineCell"];
+    return cell;
+}
+
+-(HDDBannerView *) bannerView{
+    if (!_bannerView) {
+        _bannerView = [[[NSBundle mainBundle] loadNibNamed:@"HDDBannerView" owner:self options:nil] firstObject];
+    }
+    return _bannerView;
 }
 
 -(void) setMessageBtn{

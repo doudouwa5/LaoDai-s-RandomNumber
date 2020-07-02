@@ -8,6 +8,8 @@
 
 #import "HDDFriendViewController.h"
 
+#define RATIO (0.2389)
+
 @interface HDDFriendViewController ()
 {
     
@@ -16,7 +18,9 @@
 @property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textCal;
 @property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textEveryKJ;
 @property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textWeight;
+@property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textHotThisFood;
 @property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textResult;
+@property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textOnlyOneNeed;
 @property (weak, nonatomic) IBOutlet NMEfloatLabeledTextField *textNeedCal;
 @property (weak, nonatomic) IBOutlet UILabel *tiplabel;
 
@@ -39,7 +43,7 @@
     weakself.textKJ.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
     weakself.textKJ.inputingBlock = ^(NSString *text) {
         if([weakself.textKJ.text floatValue] >= 0){
-            NSString *res = [NSString stringWithFormat:@"%0.4f ",0.2389 * [weakself.textKJ.text floatValue]];
+            NSString *res = [NSString stringWithFormat:@"%0.4f ",RATIO * [weakself.textKJ.text floatValue]];
             res = [res stringByReplacingOccurrencesOfString:@".0000 " withString:@""];
             res = [res stringByReplacingOccurrencesOfString:@"000 " withString:@""];
             res = [res stringByReplacingOccurrencesOfString:@"00 " withString:@""];
@@ -51,11 +55,11 @@
     };
     
     weakself.textCal.placeholder = @"卡路里(kcal)";
-    weakself.textCal.text = @"0.2389";
-    weakself.textCal.inputType = NMEFloatFieldInputTypeNumAndChars;
+    weakself.textCal.text = [NSString stringWithFormat:@"%0.4f",RATIO];
+    weakself.textCal.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
     weakself.textCal.inputingBlock = ^(NSString *text) {
         if([weakself.textCal.text floatValue] >= 0){
-            NSString *res = [NSString stringWithFormat:@"%0.3f ",[weakself.textCal.text floatValue] / 0.2389];
+            NSString *res = [NSString stringWithFormat:@"%0.3f ",[weakself.textCal.text floatValue] / RATIO];
             res = [res stringByReplacingOccurrencesOfString:@".000 " withString:@""];
             res = [res stringByReplacingOccurrencesOfString:@"00 " withString:@""];
             res = [res stringByReplacingOccurrencesOfString:@"0 " withString:@""];
@@ -69,14 +73,14 @@
   
     weakself.textEveryKJ.placeholder = @"您食物中每100(g/ml)所含的热量(kj)";
     weakself.textEveryKJ.text = @"";
-    weakself.textEveryKJ.inputType = NMEFloatFieldInputTypeNumAndChars;
+    weakself.textEveryKJ.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
     weakself.textEveryKJ.inputingBlock = ^(NSString *text) {
         [weakself checkNeedNum];
     };
     
     weakself.textWeight.placeholder = @"您当前食物的重量(g/ml)";
     weakself.textWeight.text = @"";
-    weakself.textWeight.inputType = NMEFloatFieldInputTypeNumAndChars;
+    weakself.textWeight.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
     weakself.textWeight.inputingBlock = ^(NSString *text) {
         [weakself checkNeedNum];
 
@@ -84,26 +88,51 @@
     
     weakself.textNeedCal.placeholder = @"您需要吃掉的热量(kcal)";
     weakself.textNeedCal.text = @"";
-    weakself.textNeedCal.inputType = NMEFloatFieldInputTypeNumAndChars;
+    weakself.textNeedCal.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
     weakself.textNeedCal.inputingBlock = ^(NSString *text) {
         [weakself checkNeedNum];
 
     };
     
+    weakself.textHotThisFood.placeholder = @"该食物的热量为";
+    weakself.textHotThisFood.userInteractionEnabled = NO;
+    weakself.textHotThisFood.text = @"";
+    weakself.textHotThisFood.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
+    weakself.textHotThisFood.inputingBlock = ^(NSString *text) {
+    };
+    
+    weakself.textOnlyOneNeed.placeholder = @"如果吃一个这个食物的话，您还差";
+    weakself.textOnlyOneNeed.userInteractionEnabled = NO;
+    weakself.textOnlyOneNeed.text = @"";
+    weakself.textOnlyOneNeed.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
+    weakself.textOnlyOneNeed.inputingBlock = ^(NSString *text) {
+    };
+    
     weakself.textResult.placeholder = @"您大约要吃掉该食物";
     weakself.textResult.userInteractionEnabled = NO;
     weakself.textResult.text = @"";
-    weakself.textResult.inputType = NMEFloatFieldInputTypeNumAndChars;
+    weakself.textResult.inputType = NMEFloatFieldInputTypePhoneNumAndPoint;
     weakself.textResult.inputingBlock = ^(NSString *text) {
     };
 }
 
 
 -(void) checkNeedNum{
+    
+    if([self.textEveryKJ.text floatValue] > 0 && [self.textWeight.text floatValue] > 0 ){
+        float kj = [self.textEveryKJ.text floatValue] * [self.textWeight.text floatValue] / 100;
+        NSString *htotStr = [NSString stringWithFormat:@"%0.4f kj    %0.4f kcal", kj, kj * RATIO];
+        htotStr = [htotStr stringByReplacingOccurrencesOfString:@".0000 " withString:@""];
+        htotStr = [htotStr stringByReplacingOccurrencesOfString:@"000 " withString:@""];
+        htotStr = [htotStr stringByReplacingOccurrencesOfString:@"00 " withString:@""];
+        htotStr = [htotStr stringByReplacingOccurrencesOfString:@"0 " withString:@""];
+        self.textHotThisFood.text = htotStr;
+    }
+    
     if([self.textEveryKJ.text floatValue] > 0 && [self.textWeight.text floatValue] > 0 && [self.textNeedCal.text floatValue] > 0){
         
         NSString *tipstr = @"";
-        double calOf100 = [self.textEveryKJ.text floatValue] * 0.2389; //100g拥有的cal
+        double calOf100 = [self.textEveryKJ.text floatValue] * RATIO; //100g拥有的cal
         double neefOf100Cal = [self.textNeedCal.text floatValue] / calOf100;  //需要多少个这样的100g
         double result = neefOf100Cal / [self.textWeight.text floatValue] *100;
         
@@ -127,10 +156,19 @@
             }
         }
         
+        float OneKj = [self.textEveryKJ.text floatValue] * [self.textWeight.text floatValue] / 100;
+        float OneCal = [self.textEveryKJ.text floatValue] * [self.textWeight.text floatValue] / 100 * RATIO;
+        float needKj = [self.textNeedCal.text floatValue] / RATIO;
+        float needcal = [self.textNeedCal.text floatValue];
+        float chaKj = needKj - OneKj;
+        float chacal = needcal - OneCal;
+        self.textOnlyOneNeed.text = [NSString stringWithFormat:@"%.2fkj  %.2fkcal",chaKj ,chacal];
+        
         self.textResult.text = [NSString stringWithFormat:@"%.2f",result];
         self.tiplabel.text = tipstr;
 
     }else{
+        self.textOnlyOneNeed.text = @"";
         self.textResult.text = @"";
         self.tiplabel.text = @"";
     }

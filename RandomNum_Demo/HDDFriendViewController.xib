@@ -12,8 +12,10 @@
             <connections>
                 <outlet property="textCal" destination="t4G-RB-8JN" id="0Ec-Ic-pmz"/>
                 <outlet property="textEveryKJ" destination="0Zc-Ud-kSK" id="6te-Sd-dad"/>
+                <outlet property="textHotThisFood" destination="eGr-UB-z6Z" id="bZ5-TD-1nr"/>
                 <outlet property="textKJ" destination="ORC-GA-W87" id="GKr-CG-jDm"/>
                 <outlet property="textNeedCal" destination="wMF-n0-3bs" id="FoM-ol-igz"/>
+                <outlet property="textOnlyOneNeed" destination="8zM-83-qS5" id="NT4-mu-Z5K"/>
                 <outlet property="textResult" destination="hoD-SI-dBO" id="Zh4-Kx-Cx3"/>
                 <outlet property="textWeight" destination="VUB-lM-Byo" id="3JA-eY-tP6"/>
                 <outlet property="tiplabel" destination="ruk-YE-wg6" id="q0G-tx-I6W"/>
@@ -46,7 +48,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入您当前食物的重量(g/ml)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUB-lM-Byo" customClass="NMEfloatLabeledTextField">
-                            <rect key="frame" x="20" y="185" width="374" height="50"/>
+                            <rect key="frame" x="20" y="180" width="374" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="eip-jo-jiD"/>
                             </constraints>
@@ -54,9 +56,17 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="您要吃掉该食物的40%" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoD-SI-dBO" customClass="NMEfloatLabeledTextField">
-                            <rect key="frame" x="20" y="325" width="374" height="50"/>
+                            <rect key="frame" x="20" y="440" width="374" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="OEG-Me-Npt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="该食物的热量为" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGr-UB-z6Z" customClass="NMEfloatLabeledTextField">
+                            <rect key="frame" x="20" y="245" width="374" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="UsG-aU-Xg7"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -80,7 +90,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruk-YE-wg6">
-                            <rect key="frame" x="25" y="385" width="369" height="20"/>
+                            <rect key="frame" x="25" y="500" width="369" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="cra-gp-tjc"/>
                             </constraints>
@@ -89,9 +99,17 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="您需要吃掉的热量(kcal)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMF-n0-3bs" customClass="NMEfloatLabeledTextField">
-                            <rect key="frame" x="20" y="255" width="374" height="50"/>
+                            <rect key="frame" x="20" y="310" width="374" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="bJf-Rv-QWh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="如果吃一个这个食物的话，您还差" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zM-83-qS5" customClass="NMEfloatLabeledTextField">
+                            <rect key="frame" x="20" y="375" width="374" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="t80-UH-zCo"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -99,30 +117,36 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="eGr-UB-z6Z" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="4R1-Ge-rk4"/>
                         <constraint firstAttribute="trailing" secondItem="ruk-YE-wg6" secondAttribute="trailing" constant="20" id="4Ri-Zx-RY8"/>
-                        <constraint firstItem="VUB-lM-Byo" firstAttribute="top" secondItem="0Zc-Ud-kSK" secondAttribute="bottom" constant="20" id="5QD-E2-9E5"/>
-                        <constraint firstItem="wMF-n0-3bs" firstAttribute="top" secondItem="VUB-lM-Byo" secondAttribute="bottom" constant="20" id="6nW-bd-KWw"/>
+                        <constraint firstItem="VUB-lM-Byo" firstAttribute="top" secondItem="0Zc-Ud-kSK" secondAttribute="bottom" constant="15" id="5QD-E2-9E5"/>
+                        <constraint firstItem="eGr-UB-z6Z" firstAttribute="top" secondItem="VUB-lM-Byo" secondAttribute="bottom" constant="15" id="8KE-kD-820"/>
                         <constraint firstItem="t4G-RB-8JN" firstAttribute="leading" secondItem="0dH-sz-Kn1" secondAttribute="trailing" constant="10" id="EMn-nf-C0x"/>
                         <constraint firstAttribute="trailing" secondItem="hoD-SI-dBO" secondAttribute="trailing" constant="20" id="Eu6-t4-iew"/>
                         <constraint firstAttribute="trailing" secondItem="wMF-n0-3bs" secondAttribute="trailing" constant="20" id="Gqt-ww-zvh"/>
                         <constraint firstItem="0dH-sz-Kn1" firstAttribute="centerY" secondItem="ORC-GA-W87" secondAttribute="centerY" id="IKt-cy-dIL"/>
-                        <constraint firstItem="hoD-SI-dBO" firstAttribute="top" secondItem="wMF-n0-3bs" secondAttribute="bottom" constant="20" id="O4p-18-3em"/>
+                        <constraint firstItem="8zM-83-qS5" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="JIP-3f-vWw"/>
                         <constraint firstAttribute="trailing" secondItem="0Zc-Ud-kSK" secondAttribute="trailing" constant="20" id="OLe-z0-wWh"/>
                         <constraint firstItem="t4G-RB-8JN" firstAttribute="top" secondItem="csT-TW-kAd" secondAttribute="top" constant="30" id="OkM-aI-tzn"/>
+                        <constraint firstItem="hoD-SI-dBO" firstAttribute="top" secondItem="8zM-83-qS5" secondAttribute="bottom" constant="15" id="eed-zp-kvE"/>
                         <constraint firstItem="0dH-sz-Kn1" firstAttribute="centerX" secondItem="csT-TW-kAd" secondAttribute="centerX" id="fcr-Rh-P9C"/>
                         <constraint firstItem="t4G-RB-8JN" firstAttribute="centerY" secondItem="ORC-GA-W87" secondAttribute="centerY" id="gvw-Gh-z6w"/>
                         <constraint firstItem="hoD-SI-dBO" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="hFR-P2-mPs"/>
                         <constraint firstItem="0Zc-Ud-kSK" firstAttribute="top" secondItem="ORC-GA-W87" secondAttribute="bottom" constant="35" id="hOc-zb-FuF"/>
                         <constraint firstItem="0Zc-Ud-kSK" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="ie8-Vc-wlH"/>
+                        <constraint firstItem="wMF-n0-3bs" firstAttribute="top" secondItem="eGr-UB-z6Z" secondAttribute="bottom" constant="15" id="ife-yF-mK6"/>
                         <constraint firstAttribute="trailing" secondItem="t4G-RB-8JN" secondAttribute="trailing" constant="20" id="nrK-og-sqd"/>
                         <constraint firstAttribute="trailing" secondItem="VUB-lM-Byo" secondAttribute="trailing" constant="20" id="oEF-9S-RIB"/>
                         <constraint firstItem="0dH-sz-Kn1" firstAttribute="leading" secondItem="ORC-GA-W87" secondAttribute="trailing" constant="10" id="obz-3q-cpi"/>
                         <constraint firstItem="wMF-n0-3bs" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="op9-gW-tB8"/>
                         <constraint firstItem="ruk-YE-wg6" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="25" id="pqh-DC-1sx"/>
                         <constraint firstItem="VUB-lM-Byo" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="srV-Kh-Yy8"/>
+                        <constraint firstItem="8zM-83-qS5" firstAttribute="top" secondItem="wMF-n0-3bs" secondAttribute="bottom" constant="15" id="tcl-lX-bjZ"/>
                         <constraint firstItem="ORC-GA-W87" firstAttribute="leading" secondItem="csT-TW-kAd" secondAttribute="leading" constant="20" id="txo-uI-oaW"/>
                         <constraint firstItem="ruk-YE-wg6" firstAttribute="top" secondItem="hoD-SI-dBO" secondAttribute="bottom" constant="10" id="uj6-ov-ZPf"/>
                         <constraint firstItem="ORC-GA-W87" firstAttribute="top" secondItem="csT-TW-kAd" secondAttribute="top" constant="30" id="x5Z-y6-iP6"/>
+                        <constraint firstAttribute="trailing" secondItem="8zM-83-qS5" secondAttribute="trailing" constant="20" id="xOo-jQ-OjW"/>
+                        <constraint firstAttribute="trailing" secondItem="eGr-UB-z6Z" secondAttribute="trailing" constant="20" id="ytF-lZ-o3g"/>
                     </constraints>
                 </view>
             </subviews>
