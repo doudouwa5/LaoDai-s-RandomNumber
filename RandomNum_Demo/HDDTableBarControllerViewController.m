@@ -34,11 +34,14 @@
 
 -(void) setChildCon{
     
+    NSDictionary *dicSelected = @{NSForegroundColorAttributeName : [HDDColor darkOrangeColor],NSFontAttributeName : [UIFont systemFontOfSize:10]};
+    
     HDDHomeViewController *vcHome = [[HDDHomeViewController alloc] init];
     HDDNavigationController* navHome = [[HDDNavigationController alloc] initWithRootViewController:vcHome];
     navHome.title = @"随机数";
     [navHome.tabBarItem setImage:[[UIImage imageNamed:@"jisuanqi-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [navHome.tabBarItem  setSelectedImage:[[UIImage imageNamed:@"jisuanqi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [navHome.tabBarItem setTitleTextAttributes:dicSelected forState:UIControlStateSelected];
 
 
 
@@ -47,19 +50,22 @@
     navFriend.title = @"转换器";
     [navFriend.tabBarItem setImage:[[UIImage imageNamed:@"shuben-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [navFriend.tabBarItem  setSelectedImage:[[UIImage imageNamed:@"shuben"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [navFriend.tabBarItem setTitleTextAttributes:dicSelected forState:UIControlStateSelected];
+
 
     HDDDiscoverViewController *vcDiscover = [[HDDDiscoverViewController alloc] init];
     HDDNavigationController* navDiscover = [[HDDNavigationController alloc] initWithRootViewController:vcDiscover];
     navDiscover.title = @"发现";
     [navDiscover.tabBarItem setImage:[[UIImage imageNamed:@"diqiuyi-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [navDiscover.tabBarItem  setSelectedImage:[[UIImage imageNamed:@"diqiuyi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    
+    [navDiscover.tabBarItem setTitleTextAttributes:dicSelected forState:UIControlStateSelected];
     
     HDDMineViewController *vcMine = [[HDDMineViewController alloc] init];
     HDDNavigationController* navMine = [[HDDNavigationController alloc] initWithRootViewController:vcMine];
     navMine.title = @"我的";
     [navMine.tabBarItem setImage:[[UIImage imageNamed:@"biyesheng-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [navMine.tabBarItem  setSelectedImage:[[UIImage imageNamed:@"biyesheng"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [navMine.tabBarItem setTitleTextAttributes:dicSelected forState:UIControlStateSelected];
     
     self.viewControllers = @[navHome,navFriend,navDiscover,navMine];
     

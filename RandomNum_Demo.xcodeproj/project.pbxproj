@@ -1044,7 +1044,7 @@
 				INFOPLIST_FILE = RandomNum_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yjoo.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1069,7 +1069,7 @@
 				INFOPLIST_FILE = RandomNum_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yjoo.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
