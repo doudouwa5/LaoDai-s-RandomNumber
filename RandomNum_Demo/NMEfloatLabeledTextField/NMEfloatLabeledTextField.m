@@ -79,7 +79,7 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     [self addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     self.delegate = self;
     self.returnKeyType = UIReturnKeyDone;
-    self.font = [UIFont systemFontOfSize:15];
+    self.font = [UIFont systemFontOfSize:14];
     self.floatingLabelFont = [UIFont systemFontOfSize:13];
     self.floatingLabelYPadding = 8;
     if(!self.placeholderColor){
