@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSString+AES_CBC.h"
 
 @interface RandomNum_DemoTests : XCTestCase
 
@@ -17,6 +18,15 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    NSString *str = @"abc";
+    NSString *encStr = [str encryptWithAES128DefaultKey];
+    NSLog(@"encStr = %@",encStr);
+    
+    NSString *decStr = [encStr decryptWithAES128DefaultKey];
+    NSLog(@"decStr = %@",decStr);
+
+    NSLog(@"888888888");
 }
 
 - (void)tearDown {

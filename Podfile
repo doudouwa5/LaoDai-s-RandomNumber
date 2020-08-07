@@ -9,6 +9,7 @@ target 'RandomNum_Demo' do
   pod 'Masonry','~>1.0.1'
   pod 'SDCycleScrollView', '~> 1.80'
   pod 'SDAutoLayout', '~> 2.1.3'
+  pod 'GTMBase64'
 
 #  pod 'AceChart'
 #  pod 'WeexAceChart'

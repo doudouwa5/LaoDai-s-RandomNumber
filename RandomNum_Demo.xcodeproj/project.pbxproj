@@ -64,6 +64,7 @@
 		82DA29B824AC61810075EA13 /* Settingscontroloptions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DA29B724AC61810075EA13 /* Settingscontroloptions@2x.png */; };
 		82DA29BA24AC61C00075EA13 /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82DA29B924AC61C00075EA13 /* message@2x.png */; };
 		82DA29C324AC75810075EA13 /* xunxun.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 82DA29C224AC75810075EA13 /* xunxun.JPG */; };
+		82DF227F24C936FC005C455A /* NSString+AES_CBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DF227E24C936FC005C455A /* NSString+AES_CBC.m */; };
 		841EA4C51DC85B7F004620B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841EA4C41DC85B7F004620B0 /* main.m */; };
 		841EA4C81DC85B7F004620B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841EA4C71DC85B7F004620B0 /* AppDelegate.m */; };
 		841EA4CE1DC85B7F004620B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841EA4CC1DC85B7F004620B0 /* Main.storyboard */; };
@@ -175,6 +176,8 @@
 		82DA29B724AC61810075EA13 /* Settingscontroloptions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settingscontroloptions@2x.png"; sourceTree = "<group>"; };
 		82DA29B924AC61C00075EA13 /* message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@2x.png"; sourceTree = "<group>"; };
 		82DA29C224AC75810075EA13 /* xunxun.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xunxun.JPG; sourceTree = "<group>"; };
+		82DF227D24C936FC005C455A /* NSString+AES_CBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES_CBC.h"; sourceTree = "<group>"; };
+		82DF227E24C936FC005C455A /* NSString+AES_CBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES_CBC.m"; sourceTree = "<group>"; };
 		841EA4C01DC85B7F004620B0 /* RandomNum_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomNum_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841EA4C41DC85B7F004620B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841EA4C61DC85B7F004620B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -276,6 +279,7 @@
 		82DA290F24A9CEA80075EA13 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				82DF228024C9370D005C455A /* AES */,
 				82DA298924AC35670075EA13 /* Define */,
 				82DA295024A9E0C80075EA13 /* view */,
 				82DA291724A9D1D50075EA13 /* catagory */,
@@ -573,6 +577,15 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		82DF228024C9370D005C455A /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				82DF227D24C936FC005C455A /* NSString+AES_CBC.h */,
+				82DF227E24C936FC005C455A /* NSString+AES_CBC.m */,
+			);
+			name = AES;
+			sourceTree = "<group>";
+		};
 		841EA4B71DC85B7F004620B0 = {
 			isa = PBXGroup;
 			children = (
@@ -856,6 +869,7 @@
 				82DA297524AC251F0075EA13 /* UIViewController+GetController.m in Sources */,
 				82DA296324A9E0E30075EA13 /* NMEfloatLabeledTextField.m in Sources */,
 				82DA292324A9D2840075EA13 /* HDDMineViewController.m in Sources */,
+				82DF227F24C936FC005C455A /* NSString+AES_CBC.m in Sources */,
 				82DA295F24A9E0E30075EA13 /* NSString+TextDirectionality.m in Sources */,
 				82DA291224A9CEC60075EA13 /* HDDColor.m in Sources */,
 				841EA4C81DC85B7F004620B0 /* AppDelegate.m in Sources */,

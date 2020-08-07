@@ -1,4 +1,5 @@
 PODS:
+  - GTMBase64 (1.0.1)
   - Masonry (1.0.2)
   - SDAutoLayout (2.1.9)
   - SDCycleScrollView (1.80):
@@ -9,6 +10,7 @@ PODS:
   - Toast (4.0.0)
 
 DEPENDENCIES:
+  - GTMBase64
   - Masonry (~> 1.0.1)
   - SDAutoLayout (~> 2.1.3)
   - SDCycleScrollView (~> 1.80)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - GTMBase64
     - Masonry
     - SDAutoLayout
     - SDCycleScrollView
@@ -23,12 +26,13 @@ SPEC REPOS:
     - Toast
 
 SPEC CHECKSUMS:
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: ddc77480ef9bc8221a83de0859403520b0b38a65
+PODFILE CHECKSUM: 90f6a28ec853b5ddf05ebef410e50b45ae5b74a4
 
 COCOAPODS: 1.9.3
