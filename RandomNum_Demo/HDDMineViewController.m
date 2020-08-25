@@ -100,6 +100,14 @@
         model3.url = @"https://www.pgyer.com/Eqwm";
         model3.hiddenRightImage = NO;
         [_dataArr addObject:model3];
+        
+        HDDMineCellModel *model4 = [HDDMineCellModel new];
+        model4.imageName = @"baby";
+        model4.tittle = [NSString stringWithFormat:@"小步在家的测试包"];
+        model4.des = @"闲人勿下，下了页安装不了";
+        model4.url = @"https://www.pgyer.com/MaDO";
+        model4.hiddenRightImage = NO;
+        [_dataArr addObject:model4];
 
     }
     return _dataArr;
