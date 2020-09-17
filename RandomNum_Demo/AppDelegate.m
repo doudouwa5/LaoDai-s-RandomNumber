@@ -64,5 +64,33 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+// 用来处理3D Touch触发事件
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+
+    //判断先前我们设置的唯一标识
+
+    if([shortcutItem.localizedTitle isEqualToString:@"随机数"]){
+
+//        NSArray *arr = @[@"hello 3D Touch"];
+//        UIActivityViewController *vc = [[UIActivityViewController alloc]initWithActivityItems:arr applicationActivities:nil];
+//        //设置当前的VC 为rootVC
+//        [self.window.rootViewController presentViewController:vc animated:YES completion:^{
+//
+//        }];
+        
+        HDDTableBarControllerViewController *barVC = (HDDTableBarControllerViewController *)self.window.rootViewController;
+        barVC.selectedIndex = 0;
+
+    }
+
+    if ([shortcutItem.localizedTitle isEqual: @"转换器"]) {
+
+         HDDTableBarControllerViewController *barVC = (HDDTableBarControllerViewController *)self.window.rootViewController;
+        barVC.selectedIndex = 1;
+
+    }
+
+}
 
 @end

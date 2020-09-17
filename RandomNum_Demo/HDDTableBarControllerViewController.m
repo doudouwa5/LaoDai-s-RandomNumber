@@ -30,6 +30,11 @@
     self.delegate = self;
     
     [self setChildCon];
+    
+   // 设置自定义标签图片
+   UIApplicationShortcutItem * itemTwo = [[UIApplicationShortcutItem alloc]initWithType:@"two" localizedTitle:@"转换器" localizedSubtitle:@"来算算老戴今天能吃多少吧！" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
+   UIApplicationShortcutItem * itemThird = [[UIApplicationShortcutItem alloc]initWithType:@"two" localizedTitle:@"随机数" localizedSubtitle:@"来给老戴生成一个随机数吧！" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove] userInfo:nil];
+   [UIApplication sharedApplication].shortcutItems = @[itemTwo, itemThird];
 }
 
 -(void) setChildCon{
